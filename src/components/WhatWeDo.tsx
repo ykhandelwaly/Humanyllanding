@@ -37,7 +37,7 @@ export function WhatWeDo() {
   return (
     <motion.section 
       ref={ref} 
-      className="py-24 px-6"
+      className="py-16 md:py-24 px-6 md:px-16"
       style={{ opacity, scale }}
     >
       <div className="max-w-[1160px] mx-auto">
@@ -52,7 +52,7 @@ export function WhatWeDo() {
         </motion.h2>
         
         <motion.p
-          className="mb-16 max-w-3xl text-[#4a4a4a]"
+          className="mb-12 md:mb-16 max-w-3xl text-[#4a4a4a]"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
@@ -61,7 +61,7 @@ export function WhatWeDo() {
           Systems that learn workflows like teammates, act through real environments, and surface signal from routine operations.
         </motion.p>
         
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {features.map((feature, index) => {
             const cardRef = cardRefs[index];
             const Icon = feature.icon;
@@ -70,7 +70,7 @@ export function WhatWeDo() {
               <motion.div
                 key={feature.title}
                 ref={cardRef}
-                className="group relative bg-white border border-[#e5e5e5] rounded-3xl p-8 hover:border-[#2CACE8]/50 transition-all duration-500 overflow-hidden shadow-sm hover:shadow-md"
+                className="group relative bg-white border border-[#e5e5e5] rounded-3xl p-6 md:p-8 hover:border-[#2CACE8]/50 transition-all duration-500 overflow-hidden shadow-sm hover:shadow-md"
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.8, delay: 0.2 + index * 0.1, ease: [0.22, 1, 0.36, 1] }}

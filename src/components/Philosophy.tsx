@@ -22,10 +22,10 @@ export function Philosophy() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-24 px-6 bg-[#fafafa]">
+    <section ref={ref} className="py-16 md:py-24 px-6 md:px-16 bg-[#fafafa]">
       <div className="max-w-[1160px] mx-auto">
         <motion.h2
-          className="text-[#0F1113] mb-16"
+          className="text-[#0F1113] mb-12 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
@@ -34,11 +34,11 @@ export function Philosophy() {
           Between thought and action
         </motion.h2>
         
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {principles.map((principle, index) => (
             <motion.div
               key={principle.title}
-              className="bg-white border border-[#e5e5e5] rounded-3xl p-8 hover:border-[#2CACE8]/30 hover:shadow-md transition-all duration-500"
+              className="bg-white border border-[#e5e5e5] rounded-3xl p-6 md:p-8 hover:border-[#2CACE8]/30 hover:shadow-md transition-all duration-500"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 0.1 + index * 0.1, ease: [0.22, 1, 0.36, 1] }}

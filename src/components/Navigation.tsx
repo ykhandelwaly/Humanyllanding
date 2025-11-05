@@ -3,10 +3,10 @@ import svgPaths from "../imports/svg-187aig97cg";
 
 export function Navigation() {
   return (
-    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-[700px] px-6">
-      <div className="flex items-center justify-between px-6 py-4 rounded-[1000px] backdrop-blur-2xl bg-white/10 border border-white/10 bg-[rgba(255,255,255,0.2)]">
+    <nav className="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-32px)] md:w-full md:max-w-[700px] px-4 md:px-6">
+      <div className="flex items-center justify-between px-4 md:px-6 py-3 md:py-4 rounded-[1000px] backdrop-blur-2xl bg-white/10 border border-white/10 bg-[rgba(255,255,255,0.2)]">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl overflow-hidden">
+          <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl overflow-hidden">
             <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 36 36">
               <g>
                 <g clipPath="url(#clip0_1_102)">
@@ -48,13 +48,13 @@ export function Navigation() {
         </div>
         
         <div className="absolute left-1/2 -translate-x-1/2">
-          <h1 className="text-[#0F1113] tracking-tight" style={{ fontFamily: "'Instrument Serif', Georgia, serif", fontSize: '1.25rem', fontWeight: 400 }}>
+          <h1 className="text-[#0F1113] tracking-tight text-lg md:text-xl" style={{ fontFamily: "'Instrument Serif', Georgia, serif", fontWeight: 400 }}>
             Humanyl
           </h1>
         </div>
         
-        <button className="bg-[#0f1113] hover:bg-[#0f1113]/90 rounded-[28px] px-[24px] py-[12px] transition-all duration-300">
-          <p className="font-['Instrument_Sans:Medium',sans-serif] text-white text-center text-nowrap" style={{ fontVariationSettings: "'wdth' 100", fontSize: '16px', fontWeight: 500 }}>
+        <button className="bg-[#0f1113] hover:bg-[#0f1113]/90 rounded-[28px] px-4 md:px-6 py-2 md:py-3 transition-all duration-300">
+          <p className="font-['Instrument_Sans:Medium',sans-serif] text-white text-center text-nowrap text-sm md:text-base" style={{ fontVariationSettings: "'wdth' 100", fontWeight: 500 }}>
             Talk To Us
           </p>
         </button>

@@ -30,10 +30,10 @@ export function Experiments() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-24 px-6">
+    <section ref={ref} className="py-16 md:py-24 px-6 md:px-16">
       <div className="max-w-[1160px] mx-auto">
         <motion.h2
-          className="text-[#0F1113] mb-16"
+          className="text-[#0F1113] mb-12 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
@@ -46,12 +46,12 @@ export function Experiments() {
           {experiments.map((experiment, index) => (
             <motion.div
               key={experiment.title}
-              className="py-8 border-t border-[#e5e5e5] first:border-t-0"
+              className="py-6 md:py-8 border-t border-[#e5e5e5] first:border-t-0"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.7, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="flex flex-col md:flex-row md:items-start gap-4">
+              <div className="flex flex-col md:flex-row md:items-start gap-3 md:gap-4">
                 <h3 
                   className="text-[#0F1113] md:w-1/3"
                   style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}
